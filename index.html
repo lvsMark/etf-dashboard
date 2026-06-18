@@ -48,8 +48,8 @@ body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFo
 .card-stats{font-size:11px;color:#8b949e;margin-bottom:8px;display:flex;gap:10px;flex-wrap:wrap}
 .card-stats .val{color:#e6edf3;font-weight:500}
 .up{color:#3fb950}.down{color:#f85149}
-/* Individual ETF charts — standard 16:9 on all screen sizes */
-.etf-card canvas{width:100%!important;aspect-ratio:16/9}
+/* Individual ETF charts — flexible height */
+.etf-card canvas{width:100%!important;height:clamp(160px,28vh,320px)}
 
 /* MOBILE */
 @media(max-width:600px){
