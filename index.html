@@ -35,9 +35,9 @@ body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFo
 .tab-pane.active{display:block}
 .section-title{font-size:10px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;margin-top:2px}
 
-/* COMBINED CHART */
+/* COMBINED CHART — flexible height, adapts to viewport */
 .combined-wrap{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px;margin-bottom:16px;position:relative}
-.combined-wrap canvas{width:100%!important;aspect-ratio:16/7}
+.combined-wrap canvas{width:100%!important;height:clamp(220px,38vh,440px)}
 
 /* GRID */
 .etf-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
@@ -48,12 +48,11 @@ body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFo
 .card-stats{font-size:11px;color:#8b949e;margin-bottom:8px;display:flex;gap:10px;flex-wrap:wrap}
 .card-stats .val{color:#e6edf3;font-weight:500}
 .up{color:#3fb950}.down{color:#f85149}
+/* Individual ETF charts — standard 16:9 on all screen sizes */
 .etf-card canvas{width:100%!important;aspect-ratio:16/9}
 
 /* MOBILE */
 @media(max-width:600px){
-  .combined-wrap canvas{aspect-ratio:4/5}
-  .etf-card canvas{aspect-ratio:4/5}
   .etf-grid{grid-template-columns:1fr}
 }
 @media(min-width:601px) and (max-width:900px){
